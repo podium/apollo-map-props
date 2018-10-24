@@ -2,9 +2,10 @@
   "name": "apollo-map-props",
   "version": "1.0.0",
   "description": "To help with props mapping when using apollo with React",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run babelify:esmodules",
+    "babelify:esmodules": "BABEL_ENV=esmodules babel index.js --out-dir build"
   },
   "repository": {
     "type": "git",
@@ -12,13 +13,32 @@
   },
   "author": "",
   "license": "MIT",
-  "peerDependencies": {
-    "lodash": "^4.17.10",
-    "react": "^16.3.2",
-    "react-apollo": "^2.1.9"
-  },
   "bugs": {
     "url": "https://github.com/podium/apollo-map-props/issues"
   },
-  "homepage": "https://github.com/podium/apollo-map-props#readme"
+  "homepage": "https://github.com/podium/apollo-map-props#readme",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16",
+    "react-apollo": "^2.1.9"
+  }
 }
