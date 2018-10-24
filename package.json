@@ -1,0 +1,24 @@
+{
+  "name": "apollo-map-props",
+  "version": "1.0.0",
+  "description": "To help with props mapping when using apollo with React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/podium/apollo-map-props.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "lodash": "^4.17.10",
+    "react": "^16.3.2",
+    "react-apollo": "^2.1.9"
+  },
+  "bugs": {
+    "url": "https://github.com/podium/apollo-map-props/issues"
+  },
+  "homepage": "https://github.com/podium/apollo-map-props#readme"
+}
