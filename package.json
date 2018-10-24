@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "To help with props mapping when using apollo with React",
   "main": "build/index.js",
+  "module": "build/index.js",
   "scripts": {
     "build": "npm run babelify:esmodules",
     "babelify:esmodules": "BABEL_ENV=esmodules babel src --out-dir build"
