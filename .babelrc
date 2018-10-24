@@ -1,0 +1,49 @@
+{
+  "env": {
+    "test": {
+      "presets": ["es2015", "react", "stage-2"],
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        [
+          "transform-runtime",
+          {
+            "polyfill": false,
+            "regenerator": true
+          }
+        ],
+        "lodash"
+      ]
+    },
+    "modules": {
+      "presets": ["es2015", "react", "stage-2"],
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        [
+          "transform-runtime",
+          {
+            "polyfill": false,
+            "regenerator": true
+          }
+        ],
+        "lodash"
+      ]
+    },
+    "esmodules": {
+      "presets": [["es2015", { "modules": false }], "react", "stage-2"],
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        [
+          "transform-runtime",
+          {
+            "polyfill": false,
+            "regenerator": true
+          }
+        ],
+        "lodash"
+      ]
+    }
+  }
+}
