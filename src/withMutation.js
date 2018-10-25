@@ -1,11 +1,11 @@
 import React from 'react';
 import { Mutation } from 'react-apollo';
+import get from './get';
 
-import _ from 'lodash';
 
 function getDisplayName(mapProps) {
   const props = mapProps({});
-  return _.get(props, 'mutation.definitions[0].name.value');
+  return get(props, 'mutation', 'definitions', 0, 'name', 'value');
 }
 
 export default function withMutation(mapPropsFn, mapResultToPropsFn) {

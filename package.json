@@ -18,10 +18,6 @@
     "url": "https://github.com/podium/apollo-map-props/issues"
   },
   "homepage": "https://github.com/podium/apollo-map-props#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "lodash": "^4.17.10"
-  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.22.1",
@@ -43,5 +39,6 @@
   "peerDependencies": {
     "react": "^15.0.0 || ^16",
     "react-apollo": "^2.1.9"
-  }
+  },
+  "dependencies": {}
 }

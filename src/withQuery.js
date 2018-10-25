@@ -1,12 +1,12 @@
 import React from 'react';
 import { Query } from 'react-apollo';
-import _ from 'lodash';
+import get from './get';
 
 const DEFAULT_FETCH_POLICY = 'cache-and-network';
 
 function getDisplayName(mapProps) {
   const props = mapProps({});
-  return _.get(props, 'query.definitions[0].name.value');
+  return get(props, 'query', 'definitions', 0, 'name', 'value');
 }
 
 export default function withQuery(mapProps, mapResultToProps) {
