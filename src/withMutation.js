@@ -24,6 +24,6 @@ export default function withMutation(mapPropsFn, mapResultToPropsFn) {
     );
 
     component.displayName = `withMutation(${displayName})`;
-    return component;
+    return React.memo(component);
   };
 }

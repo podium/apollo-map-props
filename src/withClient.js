@@ -12,7 +12,9 @@ export default function withClient(mapClientToProps) {
       </ApolloConsumer>
     );
 
-    component.displayName = `withClient(${WrappedComponent.displayName})`;
-    return component;
+    component.displayName = `withClient(${WrappedComponent.displayName ||
+      WrappedComponent.name ||
+      'Component'})`;
+    return React.memo(component);
   };
 }

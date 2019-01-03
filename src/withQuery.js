@@ -23,6 +23,6 @@ export default function withQuery(mapProps, mapResultToProps) {
     );
 
     component.displayName = `withQuery(${displayName})`;
-    return component;
+    return React.memo(component);
   };
 }
