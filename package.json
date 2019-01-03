@@ -5,8 +5,8 @@
   "main": "build/index.js",
   "module": "build/index.js",
   "scripts": {
-    "build": "npm run babelify:esmodules",
-    "babelify:esmodules": "BABEL_ENV=esmodules babel src --out-dir build"
+    "build": "npm run babelify:modules",
+    "babelify:modules": "BABEL_ENV=modules babel src --out-dir build"
   },
   "repository": {
     "type": "git",
