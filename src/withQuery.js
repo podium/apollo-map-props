@@ -2,7 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import get from './get';
 
-const DEFAULT_FETCH_POLICY = 'cache-and-network';
+let config = { fetchPolicy: 'cache-and-network' };
 
 function getDisplayName(mapProps) {
   const props = mapProps({});
@@ -14,7 +14,7 @@ export default function withQuery(mapProps, mapResultToProps) {
 
   return WrappedComponent => {
     const component = props => (
-      <Query fetchPolicy={DEFAULT_FETCH_POLICY} {...mapProps(props)}>
+      <Query fetchPolicy={config.fetchPolicy} {...mapProps(props)}>
         {result => {
           const mappedProps = mapResultToProps(result, props);
           return <WrappedComponent {...props} {...mappedProps} />;
@@ -25,4 +25,8 @@ export default function withQuery(mapProps, mapResultToProps) {
     component.displayName = `withQuery(${displayName})`;
     return React.memo(component);
   };
+}
+
+withQuery.setConfig = newConfig => {
+  config = { ...config, ...newConfig };
 }
