@@ -7,10 +7,12 @@ We created three Higher Order Component (HOC) that wraps the Apollo [Query](http
 install this package by running `npm install apollo-map-props --save`
 
 ## Configuration
-add below code to `index.js` for setting withQuery default fetchPolicy or other configs
+The default fetchPolicy for withQuery is `cache-and-network`.
+Add below code to `index.js` for changing default fetchPolicy or adding other configs.
+
 ```javascript
 import { withQuery } from 'apollo-map-props';
-withQuery.setConfig({ fetchPolicy: 'cache-and-network' })
+withQuery.setConfig({ fetchPolicy: 'network-only' })
 ```
 
 ## Usage
