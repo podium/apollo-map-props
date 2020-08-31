@@ -11,8 +11,7 @@
             "polyfill": false,
             "regenerator": true
           }
-        ],
-        "lodash"
+        ]
       ]
     },
     "modules": {
@@ -26,8 +25,7 @@
             "polyfill": false,
             "regenerator": true
           }
-        ],
-        "lodash"
+        ]
       ]
     },
     "esmodules": {
@@ -41,8 +39,7 @@
             "polyfill": false,
             "regenerator": true
           }
-        ],
-        "lodash"
+        ]
       ]
     }
   }

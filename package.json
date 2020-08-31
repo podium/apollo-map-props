@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/podium/apollo-map-props#readme",
   "devDependencies": {
+    "@apollo/client": "^3.1.3",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -32,12 +33,11 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
-    "react": "^16.3.2",
-    "react-apollo": "^2.1.9"
+    "react": "^16.3.2"
   },
   "peerDependencies": {
-    "react": "^16.6.0",
-    "react-apollo": "^2.1.9"
+    "@apollo/client": "^3.1.3",
+    "react": "^16.6.0"
   },
   "dependencies": {}
 }

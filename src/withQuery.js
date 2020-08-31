@@ -1,5 +1,5 @@
 import React from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import get from './get';
 
 let config = { fetchPolicy: 'cache-and-network' };
@@ -12,10 +12,10 @@ function getDisplayName(mapProps) {
 export default function withQuery(mapProps, mapResultToProps) {
   const displayName = getDisplayName(mapProps);
 
-  return WrappedComponent => {
-    const component = props => (
+  return (WrappedComponent) => {
+    const component = (props) => (
       <Query fetchPolicy={config.fetchPolicy} {...mapProps(props)}>
-        {result => {
+        {(result) => {
           const mappedProps = mapResultToProps(result, props);
           return <WrappedComponent {...props} {...mappedProps} />;
         }}
@@ -27,6 +27,6 @@ export default function withQuery(mapProps, mapResultToProps) {
   };
 }
 
-withQuery.setConfig = newConfig => {
+withQuery.setConfig = (newConfig) => {
   config = { ...config, ...newConfig };
-}
+};
