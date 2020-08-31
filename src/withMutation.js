@@ -1,7 +1,6 @@
 import React from 'react';
-import { Mutation } from 'react-apollo';
+import { Mutation } from '@apollo/client/react/components';
 import get from './get';
-
 
 function getDisplayName(mapProps) {
   const props = mapProps({});
@@ -13,8 +12,8 @@ export default function withMutation(mapPropsFn, mapResultToPropsFn) {
   const mapResultToProps = mapResultToPropsFn || (() => ({}));
 
   const displayName = getDisplayName(mapProps);
-  return WrappedComponent => {
-    const component = props => (
+  return (WrappedComponent) => {
+    const component = (props) => (
       <Mutation displayName={displayName} {...mapProps(props)}>
         {(mutate, result) => {
           const mappedProps = mapResultToProps(mutate, result, props);
