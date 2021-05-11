@@ -1,6 +1,6 @@
 {
   "name": "apollo-map-props",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "To help with props mapping when using apollo with React",
   "main": "build/index.js",
   "module": "build/index.js",
