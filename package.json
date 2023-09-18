@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run babelify:modules",
     "babelify:modules": "BABEL_ENV=modules babel src --out-dir build",
-    "test": "jest"
+    "test": "jest --coverage --reporters=default --collectCoverageFrom='src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/runtime-corejs2": "^7.22.15",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
     "babel-jest": "^23.4.2",
