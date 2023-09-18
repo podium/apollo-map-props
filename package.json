@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run babelify:modules",
     "babelify:modules": "BABEL_ENV=modules babel src --out-dir build",
-    "test": "jest --coverage --reporters=default --collectCoverageFrom='src/**/*.js"
+    "test": "jest --coverage --reporters=default --collectCoverageFrom='src/**/*.js'"
   },
   "repository": {
     "type": "git",
