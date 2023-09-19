@@ -1,7 +1,4 @@
 {
-  "ignore": [
-    "src/__tests__/"
-  ],
   "env": {
     "test": {
       "presets": [
