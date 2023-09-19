@@ -1,9 +1,15 @@
 {
+  "ignore": [
+    "src/__tests__/"
+  ],
   "env": {
     "test": {
       "presets": [
         "@babel/preset-env",
-        "@babel/preset-react"
+        "@babel/preset-react",
+        "es2015",
+        "react",
+        "stage-2"
       ],
       "plugins": [
         "@babel/plugin-proposal-class-properties",
