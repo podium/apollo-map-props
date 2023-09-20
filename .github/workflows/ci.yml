@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: "Use Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.16.0"
+      - run: npm ci
+      - run: npm run lint
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: "Use Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.16.0"
+      - run: npm ci
+      - run: npm test
