@@ -1,12 +1,12 @@
-import React from 'react';
-import { Query } from '@apollo/client/react/components';
-import get from './get';
+import React from "react";
+import { Query } from "@apollo/client/react/components";
+import get from "./get";
 
-let config = { fetchPolicy: 'cache-and-network' };
+let config = { fetchPolicy: "cache-and-network" };
 
 function getDisplayName(mapProps) {
   const props = mapProps({});
-  return get(props, 'query', 'definitions', 0, 'name', 'value');
+  return get(props, "query", "definitions", 0, "name", "value");
 }
 
 export default function withQuery(mapProps, mapResultToProps) {

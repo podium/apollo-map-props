@@ -1,10 +1,10 @@
-import React from 'react';
-import { Mutation } from '@apollo/client/react/components';
-import get from './get';
+import React from "react";
+import { Mutation } from "@apollo/client/react/components";
+import get from "./get";
 
 function getDisplayName(mapProps) {
   const props = mapProps({});
-  return get(props, 'mutation', 'definitions', 0, 'name', 'value');
+  return get(props, "mutation", "definitions", 0, "name", "value");
 }
 
 export default function withMutation(mapPropsFn, mapResultToPropsFn) {
