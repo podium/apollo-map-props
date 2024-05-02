@@ -8,7 +8,8 @@
     "build": "npm run babelify:modules",
     "babelify:modules": "BABEL_ENV=modules babel src --out-dir build",
     "test": "jest --coverage --reporters=default --collectCoverageFrom='src/**/*.js'",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "format:check": "prettier --check src/"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "babel-loader": "^8.0.0",
     "eslint": "^8.49.0",
     "jest": "^29.7.0",
+    "prettier": "^3.2.5",
     "react": "^16.3.2"
   },
   "peerDependencies": {

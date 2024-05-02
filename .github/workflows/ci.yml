@@ -23,4 +23,5 @@ jobs:
           node-version: "18.16.0"
       - run: yarn install --frozen-lockfile
       - run: yarn lint
+      - run: yarn format:check
       - run: yarn test
