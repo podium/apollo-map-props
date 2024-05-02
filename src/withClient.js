@@ -1,5 +1,5 @@
-import React from 'react';
-import { ApolloConsumer } from '@apollo/client';
+import React from "react";
+import { ApolloConsumer } from "@apollo/client";
 
 export default function withClient(mapClientToProps) {
   return (WrappedComponent) => {
@@ -13,7 +13,7 @@ export default function withClient(mapClientToProps) {
     );
 
     component.displayName = `withClient(${
-      WrappedComponent.displayName || WrappedComponent.name || 'Component'
+      WrappedComponent.displayName || WrappedComponent.name || "Component"
     })`;
     return React.memo(component);
   };
